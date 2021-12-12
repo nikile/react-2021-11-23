@@ -1,10 +1,10 @@
-import { useMemo } from 'react';
-import PropTypes from 'prop-types';
-import Menu from '../menu';
-import Reviews from '../reviews';
 import Banner from '../banner';
+import Menu from '../menu';
+import PropTypes from 'prop-types';
 import Rate from '../rate';
+import Reviews from '../reviews';
 import styles from './restaurant.module.css';
+import { useMemo } from 'react';
 
 const Restaurant = ({ restaurant }) => {
   const { id, name, menu, reviews } = restaurant;
@@ -40,4 +40,17 @@ Restaurant.propTypes = {
   }).isRequired,
 };
 
+// const mapStateToProps = (state, props) => ({
+//   amount: state.order[props.product.id] || 0,
+// });
+
+// const mapDispatchToProps = {
+//   decrement,
+//   increment,
+// };
+
+// const mapDispatchToProps = (dispatch, props) => ({
+//   decrement: () => dispatch(decrement(props.product.id)),
+//   increment: () => dispatch(increment(props.product.id)),
+// });
 export default Restaurant;

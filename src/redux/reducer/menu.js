@@ -4,12 +4,8 @@ import * as actionTypes from '../constants';
 export default function (state = {}, action) {
   const { type, id } = action;
   switch (type) {
-    case actionTypes.INCREMENT:
+    case actionTypes.ADD_TO_BASKET:
       return { ...state, [id]: (state[id] || 0) + 1 };
-    case actionTypes.DECREMENT:
-      return { ...state, [id]: (state[id] || 0) - 1 };
-    case actionTypes.REMOVE_PRODUCT_FROM_BASKET:
-      return { ...state, [id]: 0 };
     default:
       return state;
   }
